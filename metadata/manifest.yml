@@ -32,6 +32,9 @@ Cart-Data:
   - Key: OPENSHIFT_NODEJS_PORT
     Type: environment
     Description: "Internal port to which the web-framework binds to."
+    Key: OPENSHIFT_NODEJS_PORT_BACKEND
+    Type: environment
+    Description: "Internal port to which the backend binds to."
   - Key: OPENSHIFT_NODEJS_IP
     Type: environment
     Description: "Internal IP to which the web-framework binds to."
@@ -102,6 +105,13 @@ Endpoints:
       - Frontend:      "/health"
         Backend:       ""
         Options:       { health: true }
+  - Private-IP-Name:   IP
+    Private-Port-Name: PORT_BACKEND
+    Private-Port:      8090
+    Public-Port-Name:  PROXY_PORT_BACKEND
+    Mappings:
+      - Frontend:      ""
+      - Backend:       ""
 Version-Overrides:
   '0.6':
     Display-Name: NodeJS 0.6
