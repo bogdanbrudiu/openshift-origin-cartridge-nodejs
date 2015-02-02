@@ -10,7 +10,7 @@ Openshift already has [Node.js](http://nodejs.org/) cartridge.  So why use this 
 # Usage
 
 To deploy this cartridge with the cartridge reflector you can execute the following command
-`rhc create-app <app name> "http://cartreflect-claytondev.rhcloud.com/reflect?github=engineersamuel/openshift-origin-cartridge-nodejs"`
+`rhc create-app <app name> "http://cartreflect-claytondev.rhcloud.com/reflect?github=bogdanbrudiu/openshift-origin-cartridge-nodejs"`
 
 ## Template Repository Layout
 
